@@ -1,4 +1,4 @@
-Contributions are made by members of this repository as a member please ensure your are generating branches and commits based on clickup.
+Contributions are made by members of this repository as a member please ensure your are following the established criteria. If there is clarification required create an issue using the label *question*.
 
 ## Requesting a feature 
 
