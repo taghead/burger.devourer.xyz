@@ -1,0 +1,26 @@
+{
+  "name": "taghead.xyz",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "1.8.2"
+  },
+  "description": "Web application hosted on https://taghead.xyz/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taghead/taghead.xyz.git"
+  },
+  "keywords": [
+    "Website",
+    "taghead.xyz"
+  ],
+  "author": "Taghead",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taghead/taghead.xyz/issues"
+  },
+  "homepage": "https://github.com/taghead/taghead.xyz#readme"
+}
