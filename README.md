@@ -1,6 +1,6 @@
 # taghead.xyz
 
-This web application is hosted at the following website https://taghead.xyz/ The purpose of this is to obtain experience Angular.js and ClickUp. Features will be dealt with as they come due as this project is more fleshed out. Currently the main objective is to learn and achieve, secondary to this will be a appealing product. 
+This web application is hosted at the following website https://taghead.xyz/ The purpose of this is to obtain experience Angular.js, sass-lang and ClickUp. Features will be dealt with as they come due as this project is more fleshed out. Currently the main objective is to learn and achieve, secondary to this will be a appealing product. 
 
 ## 1. Getting Started
 
