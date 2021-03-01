@@ -10,14 +10,21 @@ This web application is hosted at the following website https://taghead.xyz/ The
 - Download and Install [git](https://git-scm.com/downloads).
 - Install Angular CLI `npm install -g @angular/cli`
 
-### 1.2. Setting up
+### 1.2. Folder Structure
+
+To better understand the Angular framework please review their documentation on:
+- [Workspace configuration files](https://angular.io/guide/file-structure#workspace-configuration-files)
+- [Developer Guilds](https://angular.io/guide/router)
+- When needed refer to https://angular.io/ as a treasure trove of information.
+  
+### 1.3. Setting up Development Environment
 
 A must is to clone the repository. Once done run `npm install` where [package.json](/package.json) is located this will download the required nodejs dependencies.
 
 ```powershell
 git clone https://github.com/taghead/taghead.xyz.git
 cd .\taghead.xyz\
-npm install
+npm install --only=dev
 ```
 
 ## 2. Angular Generated ReadMe
