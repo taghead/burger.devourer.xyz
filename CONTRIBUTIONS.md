@@ -1,16 +1,15 @@
 Contributions are made by members of this repository as a member please ensure your are following the established criteria. If there is clarification required create an issue using the label *question*.
-
 ## Requesting a feature 
 
 Create a issue requesting using the label *feature* and provide details. No formailties required.
 
 Once the feature is approved it will become available on clickup for the asignee to tackle.
 
-## Getting Assigned to a feature 
+## Getting Assigned to a feature branch
 
 If you are not assigned to a feature head over to the clickup board and look for a feature that does not have an assignee. Create a issue and use the label *assign* providing details on the feature and asignee.
 
-## Working on an feature
+## Working on a feature branch
 
 To tackle a feature you are assigned to begin by cloning the repository.
 
@@ -31,3 +30,4 @@ Once done create a pull request
 ## Pull Request Process
 - Either Git ignore or remove dependencies. 
 - Increase the version numbers in package.json.
+- Ensure the target branch is the main branch. Main will always contain the latests merged development code.

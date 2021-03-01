@@ -16,8 +16,10 @@ To better understand the Angular framework please review their documentation on:
 - [Workspace configuration files](https://angular.io/guide/file-structure#workspace-configuration-files)
 - [Developer Guilds](https://angular.io/guide/router)
 - When needed refer to https://angular.io/ as a treasure trove of information.
+
+### 1.3. Read the [CONTRIBUTIONS.md](/CONTRIBUTIONS.md)
   
-### 1.3. Setting up Development Environment
+### 1.4. Setting up Development Environment
 
 A must is to clone the repository. Once done run `npm install` where [package.json](/package.json) is located this will download the required nodejs dependencies.
 
