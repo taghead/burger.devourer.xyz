@@ -55,6 +55,53 @@ console.log(Size.Dozen);    // This will output 12
 
 # Type Assertions
 
+Some use cases of type assertions are:
+- To more clearly define a variable 
+- Obtain more [intellisense](https://code.visualstudio.com/docs/editor/intellisense) results. 
+
+Lets presume we have the following, a string variable utilizing the strings `endsWith()` method. 
+
+Here is a list of some methods a string has [w3schools](https://www.w3schools.com/js/js_string_methods.asp) [tutorialspoints](https://www.tutorialspoint.com/typescript/typescript_strings.htm).
+```typescript
+// Variable message assums string type
+let message = 'trending';
+let endsWithD = message.endsWith('d');
+```
+
+Since the code is clearly defined as a string itellisense can easily resolve all the methods associated with a string. However lets modify this to a any type.
+
+```typescript
+// Variable message assumes any type
+let message;
+message = 'trending';
+let endsWithD = message.endsWith('d');
+```
+The intellisense for a string is now no longer available. Now this is where type assertion comes in, we want to specify that `message.endsWith('d')` is a string. 
+
+Now how do we do this? 
+
+Type assertion method 1 (Popular):
+
+Prefix the variable with `<string>` then enclose the prefix and variable within brackets.
+
+```typescript
+// Variable message assumes any type
+let message;
+message = 'trending';
+let endsWithD = (<string>message).endsWith('d');
+```
+
+Type assertion method 2:
+
+Enclose the variable with brackets and then a append `as string` after the variable.
+
+```typescript
+// Variable message assumes any type
+let message;
+message = 'trending';
+let endsWithD = (message as string).endsWith('d');
+```
+
 # Arrow Functions
 
 # Interfaces
