@@ -104,9 +104,65 @@ let endsWithD = (message as string).endsWith('d');
 
 # Arrow Functions
 
+The concept of arrow functions allows you to define function ins a much nicer and cleaner way.
+
+```typescript
+// Example 1 - A function that contains a single line of code can be declared on a single line
+let conLog = (msg) => console.log(msg);
+
+// Example 2 - Multiple Lines
+let conLog = (msg) => {
+  console.log(msg);
+}
+
+// Exmaple 3 - No Parameters 
+let conLog = () => console.log("Function run");
+```
+
 # Interfaces
+Interface is a structure that defines the syntax for classes or objects to follow.
+
+```typescript
+
+// Defining an interface
+interface Player {
+  name: string,
+  id: number
+}
+
+// Using an interface in a function
+let registerPlayer = (player: Player) => {
+  //do register player stuff
+}
+
+// Passing values into a function that uses a interface
+registerPlayer({
+  x: "Andrew",
+  y: 22131231
+});
+
+```
 
 # Classes
+Since the conecpts of interfaces and functions are highly related it is more sensible for them to be in one package. There is where classes come in handy, it allows use to define groups of variables and functions that related. 
+
+```typescript
+// Defining a class
+class Player {
+  name: string,
+  id: number
+
+  register(){
+    //do register player stuff
+  };
+
+  getPlayer(){
+      //do get player suff
+  }
+}
+
+```
+# Objects
 
 # Constructors
 

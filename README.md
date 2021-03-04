@@ -49,6 +49,7 @@ The following is covered in the [/docs/typescript_refresher.md](/docs/typescript
 - Type Assertions
 - Arrow Functions
 - Interfaces
+- Objects
 - Classes
 - Constructors
 - Access Modifiers
