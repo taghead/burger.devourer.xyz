@@ -29,30 +29,23 @@ cd .\taghead.xyz\
 npm install --only=dev
 ```
 
-## 2. Angular Generated ReadMe
+### 1.5. Tips 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
+#### Angular
+- `ng serve` runs a dev server. Changes will automatically be reflected on `http://localhost:4200/`.
+- `ng generate component component-name` to generate a new component
 
-### 2.3. Development server
+read more at [/docs/angular_readme.md](/docs/angular_readme.md)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### TypeScript
 
-### 2.4. Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-### 2.5. Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-### 2.6. Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-### 2.7. Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-### 2.8. Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The following is covered in the [/docs/typescript_refresher.md](/docs/typescript_refresher.md) document. Please review is assistance is needed in the following documents. 
+- Type Annotations
+- Type Assertions
+- Arrow Functions
+- Interfaces
+- Classes
+- Constructors
+- Access Modifiers
+- Properties
+- Modules
