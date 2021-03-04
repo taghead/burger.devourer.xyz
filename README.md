@@ -31,13 +31,18 @@ npm install --only=dev
 
 ### 1.5. Tips 
 
-#### Angular
+#### 1.5.1. Angular
 - `ng serve` runs a dev server. Changes will automatically be reflected on `http://localhost:4200/`.
-- `ng generate component component-name` to generate a new component
+- `ng generate component component-name` to generate a new component.
+- `ng build` to build the project. Build will be stored in `dist/`. Using the `--prod` flag will result in a production build.
+- `ng test` perform [Karma](https://karma-runner.github.io) unit tests.
+- `ng e2e` perform [Protractor](http://www.protractortest.org/) end-to-end tests.
 
-read more at [/docs/angular_readme.md](/docs/angular_readme.md)
+Read more at [/docs/angular_readme.md](/docs/angular_readme.md)
 
-#### TypeScript
+Angular documentation available on their official website [https://angular.io](https://angular.io).
+
+#### 1.5.2. TypeScript
 
 The following is covered in the [/docs/typescript_refresher.md](/docs/typescript_refresher.md) document. Please review is assistance is needed in the following documents. 
 - Type Annotations
