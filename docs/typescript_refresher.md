@@ -144,7 +144,7 @@ registerPlayer({
 ```
 
 # Classes
-Since the conecpts of interfaces and functions are highly related it is more sensible for them to be in one package. There is where classes come in handy, it allows use to define groups of variables and functions that related. 
+Since the conecpts of interfaces and functions are highly related it is more sensible for them to be in one package. This is where classes come in handy, it allows use to define groups of variables and functions that related. 
 
 ```typescript
 // Defining a class
@@ -163,6 +163,37 @@ class Player {
 
 ```
 # Objects
+As a fundamental we group and pass data through objects. Lets begin by creating a object using the class made earlier.
+```typescript
+// Defining a class
+class Player {
+  name: string,
+  id: number
+
+  register(){
+    //do register player stuff
+    console.log('User Registered:' + this.name);
+  };
+
+  getPlayer(){
+      //do get player suff
+      console.log('User Details:' + this.name, this.id);
+  }
+}
+
+// Instantiate Player class as object playerOne.
+let playerOne = new Player();
+
+// Assign values to object class variables.
+playerOne.name = "Joe";
+playerOne.id = 1231;
+
+// Utilize class object methods
+playerOne.register()
+playerOne.getPlayer();
+
+```
+
 
 # Constructors
 
