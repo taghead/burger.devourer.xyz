@@ -194,10 +194,91 @@ playerOne.getPlayer();
 
 ```
 
-
 # Constructors
+A constructor is a method that is called when an instance of a class is created.
+```typescript
+// Defining a class
+class Player {
+  name: string,
+  id: number
+
+  //The constructor method. name is a optional variable. This is done by adding a ? to the variables name.
+  constructor(name?: string, id: number){
+    this.name = name;
+    this.id = id;
+  }
+
+  getPlayer(){
+      //do get player suff
+      console.log('User Details:' + this.name, this.id);
+  }
+}
+
+// Instantiate Player class as objects.
+let playerOne = new Player("Joe", 1231);
+let playerTwo = new Player( , 1231);
+
+// Utilize class object methods
+playerOne.getPlayer();
+```
 
 # Access Modifiers
+Simply put an access modifier is a keyword we can apply to a class to restrict it's access to the outside. 
+
+There are three access modifiers: 
+- Public ( Default when not specified )
+- Private 
+- Protected
+
+With the current implementation of the player class we will be able to set objects values by using `playerOne.name = "Carrot"`. However, there may be some use cases where you should not allow these values to change. To disable assigning a value to the name variable outside the class lets apply the keyword private to name `  private name: string`.
+
+```typescript
+// Defining a class
+class Player {
+  private name: string,
+  id: number
+
+  //The constructor method. name is a optional variable. This is done by adding a ? to the variables name.
+  constructor(name?: string, id: number){
+    this.name = name;
+    this.id = id;
+  }
+
+  getPlayer(){
+      //do get player suff
+      console.log('User Details:' + this.name, this.id);
+  }
+}
+
+// Instantiate Player class as objects.
+let playerOne = new Player("Joe", 1231);
+
+// Utilize class object methods
+playerOne.getPlayer();
+```
+
+To futher simplify the code we can use the constructor instead of declaring the variables.
+This happens because if you prefix a constructor parameter with a access modifier. Typescript compiler will generate the `this.name = name` and variable.
+
+```typescript
+// Defining a class
+class Player {
+  //The constructor method. name is a optional variable. This is done by adding a ? to the variables name.
+  constructor(private name?: string, public id: number){
+  }
+
+  getPlayer(){
+      //do get player suff
+      console.log('User Details:' + this.name, this.id);
+  }
+}
+
+// Instantiate Player class as objects.
+let playerOne = new Player("Joe", 1231);
+
+// Utilize class object methods
+playerOne.getPlayer();
+```
 
 # Properties
 
