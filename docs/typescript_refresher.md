@@ -156,7 +156,7 @@ class Player {
     //do register player stuff
   };
 
-  getPlayer(){
+  toConsole(){
       //do get player suff
   }
 }
@@ -175,7 +175,7 @@ class Player {
     console.log('User Registered:' + this.name);
   };
 
-  getPlayer(){
+  toConsole(){
       //do get player suff
       console.log('User Details:' + this.name, this.id);
   }
@@ -190,7 +190,7 @@ playerOne.id = 1231;
 
 // Utilize class object methods
 playerOne.register()
-playerOne.getPlayer();
+playerOne.toConsole();
 
 ```
 
@@ -208,7 +208,7 @@ class Player {
     this.id = id;
   }
 
-  getPlayer(){
+  toConsole(){
       //do get player suff
       console.log('User Details:' + this.name, this.id);
   }
@@ -219,7 +219,7 @@ let playerOne = new Player("Joe", 1231);
 let playerTwo = new Player( , 1231);
 
 // Utilize class object methods
-playerOne.getPlayer();
+playerOne.toConsole();
 ```
 
 # Access Modifiers
@@ -244,7 +244,7 @@ class Player {
     this.id = id;
   }
 
-  getPlayer(){
+  toConsole(){
       //do get player suff
       console.log('User Details:' + this.name, this.id);
   }
@@ -254,7 +254,7 @@ class Player {
 let playerOne = new Player("Joe", 1231);
 
 // Utilize class object methods
-playerOne.getPlayer();
+playerOne.toConsole();
 ```
 
 To futher simplify the code we can use the constructor instead of declaring the variables.
@@ -263,11 +263,11 @@ This happens because if you prefix a constructor parameter with a access modifie
 ```typescript
 // Defining a class
 class Player {
-  //The constructor method. name is a optional variable. This is done by adding a ? to the variables name.
+  //The constructor method. You can specify a optional variable by using ?. In this example it has been applied to name.
   constructor(private name?: string, public id: number){
   }
 
-  getPlayer(){
+  toConsole(){
       //do get player suff
       console.log('User Details:' + this.name, this.id);
   }
@@ -277,10 +277,67 @@ class Player {
 let playerOne = new Player("Joe", 1231);
 
 // Utilize class object methods
-playerOne.getPlayer();
+playerOne.toConsole();
 ```
 
 # Properties
+Now our implementation has a few use cases we can tackle
+- We can set the name but we are unable to read the name. To work around this lets make a method that returns the name. See `getName()`.
+  - This is useful when you want to give read only access to the outside.
+- We are unable to use `playerOne.name = ` to redefine the name due to being private. However, we can create a method to set it instead, the benifits of this allows us to constrain the input. See `setName(value)`. Alternativly see `set Name(value)`. 
+  - This is useful to allow users of the class to set values with some basic validation.
+```typescript
+class Player {
+  constructor(private name?: string, public id: number){
+
+  }
+
+  getName(){
+    return this.name;
+  }
+
+  setName(value){
+      if (name.length > 5)
+        throw new Error('Value cannot be greater than 5');
+
+      this.name = value;
+  }
+}
+
+let playerOne = new Player("Joe", 1231);
+console.log(playerOne.getName());
+playerOne.setName("John");
+console.log(playerOne.getName());
+playerOne.setName("John Doe");
+```
+
+Alternativly instead of setName(value) we can use set Name(value)
+```typescript
+class Player {
+  constructor(private name?: string, public id: number){
+
+  }
+
+  getName(){
+    return this.name;
+  }
+
+  // First letter of Name is capital to not conflict with name variable (case sensitive).
+  set Name(value){
+      if (name.length > 5)
+        throw new Error('Value cannot be greater than 5');
+
+      this.name = value;
+  }
+}
+
+let playerOne = new Player("Joe", 1231);
+console.log(playerOne.getName());
+playerOne.Name = "John";
+console.log(playerOne.getName());
+playerOne.Name = "John Doe";
+```
+
 
 # Modules
 
