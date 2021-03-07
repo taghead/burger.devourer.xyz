@@ -340,4 +340,27 @@ playerOne.Name = "John Doe";
 
 
 # Modules
+In a real world situation it is expected larger applications to be split into multiple files. This is where modules come in. Lets appropriate two seperate files, `player.ts` and `main.ts`.
 
+`player.ts`
+```typescript
+//Export keyword makes it visible to other files for import
+export class Player {
+  constructor(private name?: string, public id: number){
+
+  }
+
+  toConsole(){
+    console.log(this.name + " " + this.id);
+  }
+}
+```
+
+`main.ts`
+```typescript
+//Import class
+// Syntax is import { CLASSNAME } from 'RELATIVE PATH/FILENAME'.
+import { Player } from './player'
+let playerOne = new Player("Joe", 1231);
+playerOne.toConsole();
+```
