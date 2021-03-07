@@ -360,7 +360,7 @@ export class Player {
 ```typescript
 //Import class
 // Syntax is import { CLASSNAME } from 'RELATIVE PATH/FILENAME'.
-import { Player } from './player'
+import { Player } from './player' 
 let playerOne = new Player("Joe", 1231);
 playerOne.toConsole();
 ```
