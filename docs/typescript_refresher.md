@@ -1,12 +1,12 @@
 # Type Annotations
 
-There are three keyworkds to minds. `let`, `const` and `var`.
+There are three keywords to keep in mind. `let`, `const` and `var`.
 
-- `let` used when the variable's value should be changed throughout the program. 
-  - When compiled into javascript a warning during compilation stack may occur depending on the ES version read more on [Wiki](https://en.wikipedia.org/wiki/ECMAScript) and [W3Schools](https://www.w3schools.com/js/js_versions.asp). In response the compiled code will still produce valid javascript assuming the source is also sound. However, `let` may be translated to `var` for compatability reasons.
-  
-- `const` used when a variable's should not be changed throughout the program. 
+- `let` is used when the variable's value changes throughout the program. 
+  - When compiled into JavaScript, a warning may occur during compilation depending on the ES version read more on [Wiki](https://en.wikipedia.org/wiki/ECMAScript) and [W3Schools](https://www.w3schools.com/js/js_versions.asp). In response, the compiled code will still produce valid JavaScript assuming the source is also sound. However, `let` may be translated to `var` for compatability reasons.
 - `var` is bad practice to use in TypeScript. **DO NOT USE** 
+- `const` is used when a variable's value remains unchanged throughout the program. 
+
 
 ```typescript
 // Declaring variables examples.
@@ -56,10 +56,10 @@ console.log(Size.Dozen);    // This will output 12
 # Type Assertions
 
 Some use cases of type assertions are:
-- To more clearly define a variable 
+- Defining a variable in a more clearly manner
 - Obtain more [intellisense](https://code.visualstudio.com/docs/editor/intellisense) results. 
 
-Lets presume we have the following, a string variable utilizing the strings `endsWith()` method. 
+Let's presume we have the following, a string variable utilizing the strings `endsWith()` method. 
 
 Here is a list of some methods a string has [w3schools](https://www.w3schools.com/js/js_string_methods.asp) [tutorialspoints](https://www.tutorialspoint.com/typescript/typescript_strings.htm).
 ```typescript
@@ -68,7 +68,7 @@ let message = 'trending';
 let endsWithD = message.endsWith('d');
 ```
 
-Since the code is clearly defined as a string itellisense can easily resolve all the methods associated with a string. However lets modify this to a any type.
+Since the code is clearly defined as a string intellisense, they can easily resolve all the methods associated with a string. However, lets modify this to any type.
 
 ```typescript
 // Variable message assumes any type
@@ -78,11 +78,11 @@ let endsWithD = message.endsWith('d');
 ```
 The intellisense for a string is now no longer available. Now this is where type assertion comes in, we want to specify that `message.endsWith('d')` is a string. 
 
-Now how do we do this? 
+Now, how do we do this? 
 
-Type assertion method 1 (Popular):
+*Type assertion method 1 (Popular)*:
 
-Prefix the variable with `<string>` then enclose the prefix and variable within brackets.
+Prefix the variable with `<string>`, then enclose the prefix and variable within brackets.
 
 ```typescript
 // Variable message assumes any type
@@ -91,9 +91,9 @@ message = 'trending';
 let endsWithD = (<string>message).endsWith('d');
 ```
 
-Type assertion method 2:
+*Type assertion method 2*:
 
-Enclose the variable with brackets and then a append `as string` after the variable.
+Enclose the variable within brackets and then append `as string` after the variable.
 
 ```typescript
 // Variable message assumes any type
@@ -104,7 +104,7 @@ let endsWithD = (message as string).endsWith('d');
 
 # Arrow Functions
 
-The concept of arrow functions allows you to define function ins a much nicer and cleaner way.
+The concept of arrow functions allows you to define functions in a more concise manner.
 
 ```typescript
 // Example 1 - A function that contains a single line of code can be declared on a single line
@@ -120,7 +120,7 @@ let conLog = () => console.log("Function run");
 ```
 
 # Interfaces
-Interface is a structure that defines the syntax for classes or objects to follow.
+An Interface is a structure that defines the syntax for classes/objects to follow.
 
 ```typescript
 
@@ -144,7 +144,7 @@ registerPlayer({
 ```
 
 # Classes
-Since the conecpts of interfaces and functions are highly related it is more sensible for them to be in one package. This is where classes come in handy, it allows use to define groups of variables and functions that related. 
+Since the concepts of interfaces and functions are correlated, it is more sensible for them to be in one package. Classes can define groups of variables and functions that are related. 
 
 ```typescript
 // Defining a class
@@ -163,7 +163,7 @@ class Player {
 
 ```
 # Objects
-As a fundamental we group and pass data through objects. Lets begin by creating a object using the class made earlier.
+One of the fundamentals is using objects to group and pass data. Let's begin by creating a object using the class made earlier.
 ```typescript
 // Defining a class
 class Player {
@@ -195,7 +195,7 @@ playerOne.toConsole();
 ```
 
 # Constructors
-A constructor is a method that is called when an instance of a class is created.
+A Constructor is a method that is called when an instance of a class is created.
 ```typescript
 // Defining a class
 class Player {
@@ -223,14 +223,14 @@ playerOne.toConsole();
 ```
 
 # Access Modifiers
-Simply put an access modifier is a keyword we can apply to a class to restrict it's access to the outside. 
+In simple terms, an access modifier is a keyword we can attach to a class to restrict it's access to the outside. 
 
 There are three access modifiers: 
 - Public ( Default when not specified )
 - Private 
 - Protected
 
-With the current implementation of the player class we will be able to set objects values by using `playerOne.name = "Carrot"`. However, there may be some use cases where you should not allow these values to change. To disable assigning a value to the name variable outside the class lets apply the keyword private to name `  private name: string`.
+With the current implementation of the player class, we will be able to set objects values by using `playerOne.name = "Carrot"`. However, there may be some use cases where you should not allow these values to change. To disable assigning a value to the name variable outside the class let's apply the keyword private name to `private name: string`.
 
 ```typescript
 // Defining a class
@@ -257,8 +257,8 @@ let playerOne = new Player("Joe", 1231);
 playerOne.toConsole();
 ```
 
-To futher simplify the code we can use the constructor instead of declaring the variables.
-This happens because if you prefix a constructor parameter with a access modifier. Typescript compiler will generate the `this.name = name` and variable.
+To further simplify the code, we can use the constructor instead of declaring the variables.
+This only happens in the event that you prefix a constructor parameter with a access modifier. The Typescript compiler will generate the `this.name = name` and variable.
 
 ```typescript
 // Defining a class
@@ -281,10 +281,10 @@ playerOne.toConsole();
 ```
 
 # Properties
-Now our implementation has a few use cases we can tackle
-- We can set the name but we are unable to read the name. To work around this lets make a method that returns the name. See `getName()`.
+Now our implementation has a few use cases we can tackle:
+- We can set the name but we are unable to read the name. To work around this, let's make a method that returns the name. See `getName()`.
   - This is useful when you want to give read only access to the outside.
-- We are unable to use `playerOne.name = ` to redefine the name due to being private. However, we can create a method to set it instead, the benifits of this allows us to constrain the input. See `setName(value)`. Alternativly see `set Name(value)`. 
+- We are unable to use `playerOne.name = ` to redefine the name due to being private. However, we can create a method to set it instead, the benefits of this allows us to constrain the input. See `setName(value)`. Alternatively see `set Name(value)`. 
   - This is useful to allow users of the class to set values with some basic validation.
 ```typescript
 class Player {
@@ -311,7 +311,7 @@ console.log(playerOne.getName());
 playerOne.setName("John Doe");
 ```
 
-Alternativly instead of setName(value) we can use set Name(value)
+Alternatively instead of `setName(value)` we can use `set Name(value)`
 ```typescript
 class Player {
   constructor(private name?: string, public id: number){
@@ -340,7 +340,7 @@ playerOne.Name = "John Doe";
 
 
 # Modules
-In a real world situation it is expected larger applications to be split into multiple files. This is where modules come in. Lets appropriate two seperate files, `player.ts` and `main.ts`.
+In a real world situation, it is expected larger applications to be split into multiple files. This is where modules come in. Let's appropriate two seperate files, `player.ts` and `main.ts`.
 
 `player.ts`
 ```typescript
