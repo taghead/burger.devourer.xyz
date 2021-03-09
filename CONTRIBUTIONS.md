@@ -1,31 +1,40 @@
-Contributions are made by members of this repository as a member please ensure your are following the established criteria. If there is clarification required create an issue using the label *question*.
-## Requesting a feature 
+Contributions are made by members of this repository as a member, please ensure the established criteria is being followed. 
+If clarification is required, create an issue using the label **question**.
+## Requesting a issue 
 
-Create a issue requesting using the label *feature* and provide details. No formailties required.
+Request an issue using the label **feature** and provide details. No formailties required.
 
-Once the feature is approved it will become available on clickup for the asignee to tackle.
+Once the feature is approved, it will become available on clickup for the assignee to tackle.
 
 ## Getting Assigned to a feature branch
 
-If you are not assigned to a feature head over to the clickup board and look for a feature that does not have an assignee. Create a issue and use the label *assign* providing details on the feature and asignee.
+If you are not assigned to a feature, head over to the clickup board and look for a feature that does not have an assignee. 
+
+Create a issue and use the label *assign* providing details on the feature and assignee.
 
 ## Working on a feature branch
 
-To tackle a feature you are assigned to begin by cloning the repository.
+To get started, clone the repository to tackle an assigned feature.
 
-Head over to the Project Board on Clickup click on the task (or subtask) then click the github icon. This will automatically generated code snippits for you.
+Head over to the Project Board on Clickup > Click on the task/subtask > Click the github icon. 
 
-Start off by running the *Create & Checkout a new branch*. Example.
+This will automatically generated code snipits for you.
+
+Begin by clicking on *Create & Checkout a new branch*. 
+
+For Example:
 
 `git checkout -b "CU-32u7m4_Create-Development-Environment_Andrew"`
 
-Then use *Link a single commit* as reference for your commits, you may change the message but ensure the TaskID and - remain the same. Example. 
+Then use *Link a single commit* as a reference for your commits, the message can be changed. However, ensure the TaskID and - **remain** the same. 
+
+For Example: 
 
 `git commit -m "CU-32u7m4 - Create Development Environment"` 
 
 `git commit -m "CU-32u7m4 - Made Dev Environment"`
 
-Once done create a pull request 
+Once done create a pull request. 
 
 ## Pull Request Process
 - Either Git ignore or remove dependencies. 
