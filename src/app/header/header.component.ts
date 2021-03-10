@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
-  title = "Taghead.xyz";
-  titleSubText = "Consume the borgor";
+  title = 'taghead.xyz';
+  titleSubText = 'Consume the borgor';
+
   constructor() { }
 
   ngOnInit(): void {
