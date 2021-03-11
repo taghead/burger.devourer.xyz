@@ -1,6 +1,7 @@
 # taghead.xyz
 
-This web application is hosted at the following website https://taghead.xyz/ The purpose of this is to obtain experience Angular.js, sass-lang and ClickUp. Features will be dealt with as they come due as this project is more fleshed out. Currently the main objective is to learn and achieve, secondary to this will be a appealing product. 
+This web application is hosted on *https://taghead.xyz/*. Hosting a web application improves our knowledge on Angular.js, sass-lang and ClickUp. 
+As the project develops and becomes more fleshed out, features will be tackled one at a time. The main objective is to learn and possibly achieving an appealing product. 
 
 ## 1. Getting Started
 
@@ -19,9 +20,9 @@ To better understand the Angular framework please review their documentation on:
 
 ### 1.3. Read the [CONTRIBUTIONS.md](/CONTRIBUTIONS.md)
   
-### 1.4. Setting up Development Environment
+### 1.4. Setting up the Development Environment
 
-A must is to clone the repository. Once done run `npm install` where [package.json](/package.json) is located this will download the required nodejs dependencies.
+Cloning the repository is a prerequisite to set-up the environment. Once completed, run `npm install` where [package.json](/package.json) is located. This will download the required nodejs dependencies.
 
 ```powershell
 git clone https://github.com/taghead/taghead.xyz.git
@@ -40,11 +41,11 @@ npm install --only=dev
 
 Read more at [/docs/angular_readme.md](/docs/angular_readme.md)
 
-Angular documentation available on their official website [https://angular.io](https://angular.io).
+Angular documentation is available on their official website. [https://angular.io](https://angular.io).
 
 #### 1.5.2. TypeScript
 
-The following is covered in the [/docs/typescript_refresher.md](/docs/typescript_refresher.md) document. Please review is assistance is needed in the following documents. 
+The following is covered in the [/docs/typescript_refresher.md](/docs/typescript_refresher.md) document. Reviewing these documents will aid you in understanding the project. 
 - Type Annotations
 - Type Assertions
 - Arrow Functions
