@@ -19,12 +19,13 @@
   </div>
 </p-toolbar> -->
 <mat-toolbar>
+  <button mat-icon-button disabled color="accent" aria-label="Example icon button with a menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
   <div>
     <sub>Welcome to</sub>
     <h2>{{getTitleSubText()}}🍔</h2>
     <sub class="text-color-secondary">hosted on {{getTitle()}}</sub>
   </div>
+  <button mat-raised-button disabled>Login</button>
 </mat-toolbar>
-
-
-
