@@ -8,7 +8,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  panelOpenState = false;
+  panelOpenState = true;
   constructor() { }
 
   ngOnInit(): void {
