@@ -9,11 +9,22 @@ $dark-theme:   mat-dark-theme(( color: ( primary: $dark-primary, accent: $dark-a
 @include angular-material-color($dark-theme)
 
 $background-color-primary: #1e1e1e
+$background-color-primary-transparent: #0000006e
 $text-color-primary: #FFFFFF
 $text-color-secondary: #ffe3d7
 
 html
-  background-color: $background-color-primary
+  //background-color: $background-color-primary-transparent
   background:
     image: url(https://image.freepik.com/free-vector/collection-handrawn-elements-fast-food_125540-314.jpg)
     position: centre
+
+body
+  height: auto
+
+footer
+  background-color: $background-color-primary
+  clear: both
+  position: fixed
+  height: 200px
+  //margin-top: -200px

@@ -8,16 +8,19 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { BodyComponent } from './body/body.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { FooterComponent } from './footer/footer.component';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
