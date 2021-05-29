@@ -1,8 +1,13 @@
 on:
   push:
     branches: [ CU-3cx2n7_Create-build-pipeline-to-deploy-onto-tagheadxyz_Andrew ]
+      tags:
+        - '*'
   pull_request:
     branches: [ CU-3cx2n7_Create-build-pipeline-to-deploy-onto-tagheadxyz_Andrew ]
+      tags:
+        - '*'
+
 name: Build Angular
 jobs:
   build:
