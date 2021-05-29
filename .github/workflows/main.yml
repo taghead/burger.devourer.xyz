@@ -7,7 +7,7 @@ on:
 name: Build Angular
 jobs:
   build:
-    if: github.event.base_ref == 'refs/heads/CU-3cx2n7_Create-build-pipeline-to-deploy-onto-tagheadxyz_Andrew'
+    #if: github.event.base_ref == 'refs/heads/CU-3cx2n7_Create-build-pipeline-to-deploy-onto-tagheadxyz_Andrew'
     runs-on: ubuntu-latest
     strategy:
       matrix:
