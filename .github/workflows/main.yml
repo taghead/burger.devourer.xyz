@@ -32,8 +32,8 @@ jobs:
           npm i
           npm run-script build --prod
           mkdir build
-          tar -czvf build/compiled.tar.gz dist/tagheadxyz/*
-          zip -r build/compiled.zip dist/tagheadxyz/*
+          tar -czvf build/tagheadxyz-build-${GITHUB_REF/refs\/tags\//}.tar.gz dist/tagheadxyz/*
+          zip -r build/tagheadxyz-build-${GITHUB_REF/refs\/tags\//}.zip dist/tagheadxyz/*
       - name: Push Build to Releases
         uses: ncipollo/release-action@v1
         with:
