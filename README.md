@@ -1,4 +1,5 @@
 # taghead.xyz
+[![Build Angular](https://github.com/taghead/taghead.xyz/actions/workflows/main.yml/badge.svg)](https://github.com/taghead/taghead.xyz/actions/workflows/main.yml)
 
 This web application is hosted on *https://taghead.xyz/*. Hosting a web application improves our knowledge on Angular.js, sass-lang and ClickUp. 
 As the project develops and becomes more fleshed out, features will be tackled one at a time. The main objective is to learn and possibly achieving an appealing product. 
