@@ -1,9 +1,7 @@
 on:
-  push:
-    branches: [ CU-3cx2n7_Create-build-pipeline-to-deploy-onto-tagheadxyz_Andrew ]
-
-  pull_request:
-    branches: [ CU-3cx2n7_Create-build-pipeline-to-deploy-onto-tagheadxyz_Andrew ]
+  create:
+    tags:
+      - v*
 
 name: Build Angular
 jobs:
@@ -14,9 +12,7 @@ jobs:
         node-version: [12.x]
 
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v1
 
       - name: Cache node modules
         uses: actions/cache@v1
