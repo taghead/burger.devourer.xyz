@@ -1,5 +1,3 @@
-name: Node.js CI
-
 on:
   push:
     branches: [ CU-3cx2n7_Create-build-pipeline-to-deploy-onto-tagheadxyz_Andrew ]
