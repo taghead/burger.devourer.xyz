@@ -1,7 +1,9 @@
 on:
-  create:
-    tags:
-      - v*
+  push:
+    branches: [ CU-3cx2n7_Create-build-pipeline-to-deploy-onto-tagheadxyz_Andrew ]
+
+  pull_request:
+    branches: [ CU-3cx2n7_Create-build-pipeline-to-deploy-onto-tagheadxyz_Andrew ]
 
 name: Build Angular
 jobs:
