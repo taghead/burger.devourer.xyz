@@ -40,3 +40,8 @@ Once done create a pull request.
 - Either Git ignore or remove dependencies. 
 - Increase the version numbers in package.json.
 - Ensure the target branch is the main branch. Main will always contain the latests merged development code.
+
+## Build and Tag Release
+`git add .; git commit -m "Release"; git push`
+`git tag -a v0.1 -m "v0.1 Initial build workflow testing"`
+`git push origin v0.1`
