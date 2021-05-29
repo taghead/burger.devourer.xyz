@@ -31,8 +31,11 @@ jobs:
         run: |
           npm i
           npm build
+          ls -la
+          ls dist/ -la
+          git status
       - name: Push Build to Releases
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "/home/runner/work/taghead.xyz/taghead.xyz/dist/*"
+          artifacts: "dist/*"
           token: ${{ secrets.TOKEN }}
