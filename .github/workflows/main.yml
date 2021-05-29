@@ -27,13 +27,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install and npm run build
+      - name: npm install and build
         run: |
           npm i
           npm run-script build --prod
           mkdir build
-          tar -czvf build/compiled.tar.gz dist/*
-          zip -r build/compiled.zip dist/*
+          tar -czvf build/compiled.tar.gz dist/tagheadxyz/*
+          zip -r build/compiled.zip dist/tagheadxyz/*
       - name: Push Build to Releases
         uses: ncipollo/release-action@v1
         with:
