@@ -27,7 +27,7 @@ export class BodyComponent implements OnInit {
 
     let url="https://www.youtube-nocookie.com/embed/";
     let video=videos[Math.floor(Math.random() * videos.length)];
-    let urlArgs = "?autoplay=1&t=4&loop=1&modestbranding=1&showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&fs=0";
+    let urlArgs = "?autoplay=1&t=4&loop=1&modestbranding=1&showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&fs=0&loop=1&rel=0";
     let videoElement = document.getElementById("borgor-video");
     videoElement.setAttribute("src", url+video+urlArgs);
   }
