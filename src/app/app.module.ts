@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -30,7 +31,8 @@ import { BodyComponent } from './body/body.component';
     MatIconModule,
     MatButtonModule,
     MatExpansionModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

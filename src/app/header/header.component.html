@@ -1,6 +1,6 @@
 <mat-toolbar>
-  <button mat-icon-button disabled color="accent" aria-label="Example icon button with a menu icon">
-    <mat-icon>menu</mat-icon>
+  <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+    <mat-icon (click)="drawer.toggle()">menu</mat-icon>
   </button>
   <div>
     <sub>Welcome to</sub>
@@ -9,3 +9,9 @@
   </div>
   <button mat-raised-button disabled>Login</button>
 </mat-toolbar>
+
+<mat-drawer-container>
+  <mat-drawer #drawer mode="side">
+    <p>Work in progress</p>
+  </mat-drawer>
+</mat-drawer-container>
