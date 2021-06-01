@@ -7,7 +7,7 @@
     <h2>{{getTitleSubText()}}🍔</h2>
     <sub class="text-color-secondary">hosted on {{getTitle()}}</sub>
   </div>
-  <button mat-raised-button disabled>Login</button>
+  <button mat-raised-button (click)="openLoginDialog()" >Login</button>
 </mat-toolbar>
 
 <mat-drawer-container>
@@ -41,10 +41,24 @@
       <table>
         <tr>
           <td>
-            <mat-icon>Feedback</mat-icon>
+            <mat-icon>feedback</mat-icon>
           </td>
           <td>
-            feedback
+            Feedback
+          </td>
+        </tr>
+      </table>
+    </button><br/>
+
+    <br/>
+    <button mat-stroked-button>
+      <table>
+        <tr>
+          <td>
+            <mat-icon>color_lens</mat-icon>
+          </td>
+          <td>
+            Color swap
           </td>
         </tr>
       </table>

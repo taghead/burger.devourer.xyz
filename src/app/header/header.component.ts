@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
+import {MatDialog} from '@angular/material/dialog';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
   title = 'taghead.xyz';
   titleSubText = 'Consume the borgor';
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
 
@@ -24,4 +24,14 @@ export class HeaderComponent implements OnInit {
     return this.titleSubText;
   }
 
+  openLoginDialog() {
+    this.dialog.open(loginDialog);
+  }
+
 }
+
+@Component({
+  selector: 'app-dialog-login',
+  templateUrl: 'header.component.dialog.login.html',
+})
+export class loginDialog {}
