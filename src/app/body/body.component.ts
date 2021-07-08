@@ -16,22 +16,24 @@ export class BodyComponent implements OnInit {
    this.getVideo();
 
    // Event listener for Consume Another button
-   let btnConsumeAnother = document.getElementById("btn-consume");
-   btnConsumeAnother.addEventListener("click", this.getVideo);
+   const btnConsumeAnother = document.getElementById('btn-consume');
+   btnConsumeAnother.addEventListener('click', this.getVideo);
   }
 
-  getVideo(){
-    let videos = ["j8H4pm9Q-Rw", "qlCGh33eIFQ", "ud-jsyDQBOY", "KcDVHkdrBlw", "6f8jqEmDFVo",
-                 "E-xhxS581Uc", "J9Id5dDTYz8", "1Ma4K2518NA", "doQljoFtBIs"];
+  getVideo = () => {
+    const videos = ['j8H4pm9Q-Rw', 'qlCGh33eIFQ', 'ud-jsyDQBOY', 'KcDVHkdrBlw', '6f8jqEmDFVo',
+                    'E-xhxS581Uc', 'J9Id5dDTYz8', '1Ma4K2518NA', 'doQljoFtBIs', '0y0y-nRqn5Q',
+                    'TuxZdONfw8Y', 'toZW65rksYY'];
 
-    let url="https://www.youtube-nocookie.com/embed/";
-    let randomNumber = Math.floor(Math.random() * videos.length)
-    let video=videos[randomNumber];
-    let urlArgs = "?autoplay=1&t=4&loop=1&modestbranding=1&showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&fs=0&loop=1&rel=0";
-    let videoElement = document.getElementById("borgor-video");
-    videoElement.setAttribute("src", url+video+urlArgs);
+    const url = 'https://www.youtube-nocookie.com/embed/';
+    const randomNumber = Math.floor(Math.random() * videos.length);
+    const video = videos[randomNumber];
+    const urlArgs = '?autoplay=1&t=4&loop=1&modestbranding=1&showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&fs=0&loop=1&rel=0';
 
-    let videoCount = document.getElementById("video-count");
-    videoCount.innerHTML = `Currently consuming burger ${randomNumber} out of ${videos.length}`
+    const videoElement = document.getElementById('borgor-video');
+    videoElement.setAttribute('src', url + video + urlArgs);
+
+    const videoCount = document.getElementById('video-count');
+    videoCount.innerHTML = `Currently consuming burger ${randomNumber} out of ${videos.length}`;
   }
 }
