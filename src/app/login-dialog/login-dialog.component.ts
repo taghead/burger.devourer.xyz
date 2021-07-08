@@ -8,16 +8,13 @@ import {FormControl, Validators} from '@angular/forms';
   encapsulation: ViewEncapsulation.None
 })
 export class LoginDialogComponent implements OnInit {
-
   hide = true;
-  constructor() { }
-  ngOnInit(): void {
-
-  }
-
   email = new FormControl('', [Validators.required, Validators.email]);
 
-  getErrorMessage() {
+  constructor() { }
+  ngOnInit(): void { }
+
+  getErrorMessage = () => {
     if (this.email.hasError('required')) {
       return 'You must enter a value';
     }
