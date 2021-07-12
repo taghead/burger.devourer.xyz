@@ -45,15 +45,21 @@ Read more at [/docs/angular_readme.md](/docs/angular_readme.md)
 Angular documentation is available on their official website. [https://angular.io](https://angular.io).
 
 #### 1.5.2. TypeScript
+The following is covered in the [/docs/typescript_refresher.md](/docs/typescript_refresher.md) document. Reviewing these documents will aid you in understanding the basics. 
 
-The following is covered in the [/docs/typescript_refresher.md](/docs/typescript_refresher.md) document. Reviewing these documents will aid you in understanding the project. 
-- Type Annotations
-- Type Assertions
-- Arrow Functions
-- Interfaces
-- Objects
-- Classes
-- Constructors
-- Access Modifiers
-- Properties
-- Modules
+| <ul> <li>Type Annotations</li> <li>Type Assertions</li> <li>Arrow Functions</li> <li>Interfaces</li> <li>Objects</li> </ul> |<ul> <li>Classes</li> <li>Constructors</li> <li>Access Modifiers</li> <li>Properties</li> <li>Modules</li> </ul>|
+| :------------ |:--------------|
+
+## 2. Configuring secrets
+
+### 2.1 Supabase Backend ( User Authentication )
+
+User authentication is done through supabase.io, enabling this requires their provided API KEY and URL to be applied to [/src/environments/environment.ts](/src/environments/environment.ts) and [/src/environments/environment.prod.ts](/src/environments/environment.prod.ts).
+
+```javascript
+export const environment = {
+  production: false,
+  supabase_url: 'URL Here',
+  supabase_key: 'API Key here'
+};
+```
