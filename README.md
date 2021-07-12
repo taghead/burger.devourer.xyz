@@ -1,6 +1,6 @@
 # <p align="center"> :hamburger: taghead.xyz :hamburger: </p>
 [![Build Angular](https://github.com/taghead/taghead.xyz/actions/workflows/main.yml/badge.svg)](https://github.com/taghead/taghead.xyz/actions/workflows/main.yml)
-# <p align="center"> ![v0.15 Preview](docs\img\previews\v0.15\v0.15_Desktop.gif) </p>
+# <p align="center"> ![v0.15 Preview](docs/img/previews/v0.15/v0.15_Desktop.gif) </p>
 
 This web application live and hosted on https://taghead.xyz/. The focus of this repository is to expand our knowledge.
 
