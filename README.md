@@ -31,25 +31,6 @@ cd .\taghead.xyz\
 npm install --only=dev
 ```
 
-### 1.5. Tips 
-
-#### 1.5.1. Angular
-- `ng serve` runs a dev server. Changes will automatically be reflected on `http://localhost:4200/`.
-- `ng generate component component-name` to generate a new component.
-- `ng build` to build the project. Build will be stored in `dist/`. Using the `--prod` flag will result in a production build.
-- `ng test` perform [Karma](https://karma-runner.github.io) unit tests.
-- `ng e2e` perform [Protractor](http://www.protractortest.org/) end-to-end tests.
-
-Read more at [/docs/angular_readme.md](/docs/angular_readme.md)
-
-Angular documentation is available on their official website. [https://angular.io](https://angular.io).
-
-#### 1.5.2. TypeScript
-The following is covered in the [/docs/typescript_refresher.md](/docs/typescript_refresher.md) document. Reviewing these documents will aid you in understanding the basics. 
-
-| <ul> <li>Type Annotations</li> <li>Type Assertions</li> <li>Arrow Functions</li> <li>Interfaces</li> <li>Objects</li> </ul> |<ul> <li>Classes</li> <li>Constructors</li> <li>Access Modifiers</li> <li>Properties</li> <li>Modules</li> </ul>|
-| :------------ |:--------------|
-
 ## 2. Configuring secrets
 
 ### 2.1 Supabase Backend ( User Authentication )
@@ -63,3 +44,22 @@ export const environment = {
   supabase_key: 'API Key here'
 };
 ```
+
+## 3. Additional Information
+
+#### 3.1.1. Angular development commands
+- `ng serve` runs a dev server. Changes will automatically be reflected on `http://localhost:4200/`.
+- `ng generate component component-name` to generate a new component.
+- `ng build` to build the project. Build will be stored in `dist/`. Using the `--prod` flag will result in a production build.
+- `ng test` perform [Karma](https://karma-runner.github.io) unit tests.
+- `ng e2e` perform [Protractor](http://www.protractortest.org/) end-to-end tests.
+
+Read more at [/docs/angular_readme.md](/docs/angular_readme.md)
+
+Angular documentation is available on their official website. [https://angular.io](https://angular.io).
+
+#### 3.1.2. TypeScript topics of interest
+The following is covered in the [/docs/typescript_refresher.md](/docs/typescript_refresher.md) document. Reviewing these documents will aid you in understanding the basics. 
+
+| <ul> <li>Type Annotations</li> <li>Type Assertions</li> <li>Arrow Functions</li> <li>Interfaces</li> <li>Objects</li> </ul> |<ul> <li>Classes</li> <li>Constructors</li> <li>Access Modifiers</li> <li>Properties</li> <li>Modules</li> </ul>|
+| :------------ |:--------------|
