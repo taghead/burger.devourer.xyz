@@ -15,6 +15,18 @@ Additional Technologies:
 
 As the project develops and becomes more fleshed out, features will be tackled one at a time. The main objective is to learn and possibly achieving an appealing product. 
 
+Progress
+- [x] Base UI
+  - [ ] Personalize Website Themes 
+  - [ ] Seamless Crossplatform
+- [ ] Build as Android and iOS app
+- [ ] User Management
+  - [ ] User Generated Content 
+    - [ ] Upload Video Links
+    - [ ] Voting System
+- [ ] User Feedback System
+- [ ] Maybe [hm-pattent-comliance](https://github.com/humanmade/hm-pattern-library)?
+
 ## 1. Overview
 
 ### 1.1. Dependencies 
