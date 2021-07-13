@@ -1,5 +1,14 @@
 Contributions are made by members of this repository as a member, please ensure the established criteria is being followed. 
 If clarification is required, create an issue using the label **question**.
+
+## Important Instructions
+The following commands will ensure that secrets don't get revealed to the public.
+
+```powershell
+git update-index --skip-worktree .\src\environments\environment.prod.ts
+git update-index --skip-worktree .\src\environments\environment.ts
+```
+
 ## Requesting a issue 
 
 Request an issue using the label **feature** and provide details. No formailties required.
