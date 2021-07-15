@@ -5,8 +5,8 @@ import { Provider } from '@supabase/supabase-js'
 import { Router } from '@angular/router'
 
 interface HelperText {
-  text: string
-  error: boolean
+  text: string;
+  error: boolean;
 }
 
 @Component({
