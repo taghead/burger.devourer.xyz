@@ -48,3 +48,6 @@ Thumbs.db
 # Angular Environment Variables
 src/environments/environment.ts
 src/environments/environment.prod.ts
+
+# Supabase
+.supabase
