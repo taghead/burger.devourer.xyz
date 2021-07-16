@@ -85,6 +85,38 @@ The technical document contains documentation of actual programming components a
       min-height: 10vh
       height: fit-content
     ```
+
+## Supabase
+[Supabase](https://supabase.io) is a PaaS service which is used for it's Authentication, Database and Storage backend.
+
+#### Installing Development Environment
+Supabase requires docker, docker-compose and the supabase-js module.
+
+- (Optionally) Install [Docker Desktop](https://docs.docker.com/desktop/)
+- Install [Docker](https://docs.docker.com/engine/install/)
+- Install [Docker-compose](https://docs.docker.com/compose/install/)
+- Add and install supbase-js as a dependency by running `npm install @supabase/supabase-js --save`
+
+#### Supabase API Credentials
+Some services and components require credentials consisting of Supabases API URL and API Key.
+
+There are two versions of credentials we will be obtaining, production and testing.
+
+Lets start by obtaining the production credentials, open up [https://supabase.io](https://supabase.io) and create a new project. 
+
+##### Production Credentials
+Once the project is stood up navigate to `Settings > API` to retreive the production credentials [/src/environments/environment.prod.ts](/src/environments/environment.prod.ts). Finally to whitelist the domain/ip address the website is hosted on head over to `Authentication > Settings` and change fill both Site URL and Additional Redirect URLs to https://taghead.xyz.
+
+```javascript
+export const environment = {
+  production: true,
+  supabase_url: 'Your Supabase URL here',
+  supabase_key: 'Your Supabase API Key here'
+};
+```
+
+##### Local Testing Credentials
+
 ## Component and Services Development
 🍉 = Component | 🥭 = Service
 ### 🍉 body
