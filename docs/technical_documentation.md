@@ -1,6 +1,6 @@
 # Technical Document
 
-The technical document contains documentation of actual programming components, with every stable development the contents will be updated.
+The technical document contains documentation of actual programming components and the instructions to recreate the entire project. With every stable development its contents will be updated. For simplicity sake, if a change can be edited in rather than appended it would be good to do so.
 
 ## Preparing development environment
 
@@ -85,4 +85,19 @@ The technical document contains documentation of actual programming components, 
       min-height: 10vh
       height: fit-content
     ```
-6. 
+## Component and Services Development
+🍉 = Component | 🥭 = Service
+### 🍉 body
+This component is located in [/src/app/body](/src/app/body)
+
+### 🍉 footer 
+This component is located in [/src/app/footer](/src/app/footer)
+
+###  🍉header 
+This component is located in [/src/app/header](/src/app/header)
+
+### 🍉 login-dialog 
+This component is located in [/src/app/login-dialog](/src/app/login-dialog)
+
+### 🥭 supabase
+This service is located in [/src/app/](/src/app/) as [/src/app/supabase.service](/src/app/supabase.service) and [/src/app/supabase.spec.service](/src/app/supabase.spec.service)
