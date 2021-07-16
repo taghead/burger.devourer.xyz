@@ -44,4 +44,45 @@ The technical document contains documentation of actual programming components, 
 
     When asked "Is this OK? (yes)" enter `yes`.
 
-5. 
+5. Install Angular Material module and setup Sass theming.
+   
+   Run `npm install @angular/material @angular/cdk --save`
+
+   Add the following to [/src/styles.sass](/src/styles.sass)
+   ```javascript
+    @import '~@angular/material/theming'
+    @include mat-core()
+
+    $dark-primary: mat-palette($mat-blue-grey)
+    $dark-accent:  mat-palette($mat-amber, A200, A100, A400)
+    $dark-warn:    mat-palette($mat-deep-orange)
+    $dark-theme:   mat-dark-theme(( color: ( primary: $dark-primary, accent: $dark-accent, warn: $dark-warn, )))
+
+    @include angular-material-color($dark-theme)
+
+    $background-color-primary: #1e1e1e
+    $background-color-primary-transparent: #0000006e
+    $text-color-primary: #FFFFFF
+    $text-color-secondary: #ffe3d7
+
+    $main-height: 75vh
+
+    html
+      //background-color: $background-color-primary-transparent
+      background:
+        image: url(https://image.freepik.com/free-vector/collection-handrawn-elements-fast-food_125540-314.jpg)
+        position: centre
+
+    body
+      min-height: $main-height
+      height: fit-content
+      background-color: $background-color-primary-transparent
+
+    footer
+      background-color: $background-color-primary
+      clear: both
+      position: relative
+      min-height: 10vh
+      height: fit-content
+    ```
+6. 
