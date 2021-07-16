@@ -1,10 +1,10 @@
-# Technical Document
+# Technical Documentation
 
 The technical document contains documentation of actual programming components and the instructions to recreate the entire project. With every stable development its contents will be updated. For simplicity sake, if a change can be edited in rather than appended it would be good to do so.
 
 ## Preparing development environment
 
-1. Create a GitHub repository and clone it then open the folder in a terminal.
+1. Create a GitHub repository named taghead.xyz and clone it then open the folder in a terminal.
 
 2. Download and Install :
    - [Node.js (with npm)](https://nodejs.org/en/download/) - Used for building, development and testing.
@@ -101,3 +101,6 @@ This component is located in [/src/app/login-dialog](/src/app/login-dialog)
 
 ### 🥭 supabase
 This service is located in [/src/app/](/src/app/) as [/src/app/supabase.service](/src/app/supabase.service) and [/src/app/supabase.spec.service](/src/app/supabase.spec.service)
+
+## Git Workflow
+The git workflow is located in [/.github/workflows/main.yml](/.github/workflows/main.yml)
