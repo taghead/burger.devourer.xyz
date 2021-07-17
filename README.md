@@ -63,6 +63,10 @@ export const environment = {
 
 Finally run `npm run start`
 
+This will serve the website on http://localhost:4200 and emulate Supabase. 
+
+Supabase email emulation server is on http://localhost:9000.
+
 ## 3. Additional Information
 #### 3.1. Forgot TypeScript? 
 Give the [/docs/typescript_refresher.md](/docs/typescript_refresher.md) a read. Hopefully, it will help you out.
