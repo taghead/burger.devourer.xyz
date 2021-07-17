@@ -43,7 +43,7 @@
   "main": "index.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "supabase start && ng serve && supabase stop",
     "build": "ng build",
     "build-prod": "ng build --prod",
     "test": "ng test",

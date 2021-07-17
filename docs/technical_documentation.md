@@ -89,15 +89,15 @@ The technical document contains documentation of actual programming components a
 ## Supabase
 [Supabase](https://supabase.io) is a PaaS service which is used for it's Authentication, Database and Storage backend.
 
-#### Installing Development Environment
+#### Installing and preparing development environment
 Supabase requires docker, docker-compose and the supabase-js module.
 
 - (Optionally) Install [Docker Desktop](https://docs.docker.com/desktop/)
 - Install [Docker](https://docs.docker.com/engine/install/)
 - Install [Docker-compose](https://docs.docker.com/compose/install/)
 - Add and install supbase-js as a dependency by running `npm install @supabase/supabase-js --save`
-
-#### Supabase API Credentials
+- Add and install supabase cli as a dev-dependency by running `npm install supabase --save-dev`
+#### Supabase API credentials
 Some services and components require credentials consisting of Supabases API URL and API Key.
 
 There are two versions of credentials we will be obtaining, production and testing.
@@ -105,7 +105,7 @@ There are two versions of credentials we will be obtaining, production and testi
 Lets start by obtaining the production credentials, open up [https://supabase.io](https://supabase.io) and create a new project. 
 
 ##### Production Credentials
-Once the project is stood up navigate to `Settings > API` to retreive the production credentials [/src/environments/environment.prod.ts](/src/environments/environment.prod.ts). Finally to whitelist the domain/ip address the website is hosted on head over to `Authentication > Settings` and change fill both Site URL and Additional Redirect URLs to https://taghead.xyz.
+Once the project is stood up navigate to `Settings > API` to retreive the production credentials and apply it to [/src/environments/environment.prod.ts](/src/environments/environment.prod.ts). Finally to whitelist the domain/ip address the website is hosted on head over to `Authentication > Settings` and change fill both Site URL and Additional Redirect URLs to https://taghead.xyz.
 
 ```javascript
 export const environment = {
@@ -116,6 +116,31 @@ export const environment = {
 ```
 
 ##### Local Testing Credentials
+Run `npx supabase init` and use the following ports:
+
+```
+√ Port for Supabase URL: · 8000       
+√ Port for PostgreSQL database: · 5432    
+√ Port for email testing interface: · 9000
+```
+
+Once it finishes intializing you will be given local Supabase credentials
+```powershell
+Supabase URL: http://localhost:8000
+Supabase Key (anon, public): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzdXBhYmFzZSIsImlhdCI6MTYwMzk2ODgzNCwiZXhwIjoyNTUwNjUzNjM0LCJyb2xlIjoiYW5vbiJ9.36fUebxgx1mcBo4s19v0SzqmzunP--hm_hep0uLX0ew
+Supabase Key (service_role, private): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzdXBhYmFzZSIsImlhdCI6MTYwMzk2ODgzNCwiZXhwIjoyNTUwNjUzNjM0LCJyb2xlIjoic2VydmljZV9yb2xlIn0.necIJaiP7X2T2QjGeV-FhpkizcNTX8HjDDBAxpgQTEI
+Database URL: postgres://postgres:postgres@localhost:5432/postgres
+Email testing interface URL: http://localhost:9000
+```
+Apply the Supabase URL and Supabase Key (anon, public) to [/src/environments/environment.ts](/src/environments/environment.ts)
+
+Modify the the start script in [/package.json](/package.json) to
+
+`"start": "supabase start && ng serve && supabase stop"`.
+
+Finally run `npm run start`
+
+Note: To access the email testing server navigate to http://localhost:9000
 
 ## Component and Services Development
 🍉 = Component | 🥭 = Service
