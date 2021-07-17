@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  supabase_url: 'Your Supabase URL here',
+  supabase_key: 'Your Supabase API Key here'
 };
 
 /*
