@@ -15,55 +15,60 @@ Additional Technologies:
 
 As the project develops and becomes more fleshed out, features will be tackled one at a time. The main objective is to learn and possibly achieving an appealing product. 
 
-Progress
-- [x] Base UI
-  - [ ] Personalize Website Themes 
-  - [ ] Seamless Crossplatform
-- [ ] Build as Android and iOS app
+Feature List
 - [ ] User Management
-  - [ ] User Generated Content 
-    - [ ] Upload Video Links
-    - [ ] Voting System
+- [ ] User Generated Content
+- [ ] Upload Video Links
+- [ ] Voting System
 - [ ] User Feedback System
-- [ ] Maybe [hm-pattent-comliance](https://github.com/humanmade/hm-pattern-library)?
 
-## 1. Overview
+## 1. Building/Development
 
-### 1.1. Dependencies 
 Download and Install :
 - [Node.js (with npm)](https://nodejs.org/en/download/) - Used for building, development and testing.
-  - NodeJS global modules:
-    - Angular CLI `npm install -g @angular/cli`
-    - Typescript `npm install -g typescript`
 - [Git](https://git-scm.com/downloads) - Used for collaborative software development
 
-### 1.2. Read the [CONTRIBUTIONS.md](/CONTRIBUTIONS.md)
-  
-### 1.3. Setting up the Development Environment
-
-Cloning the repository and installing node.js modules are prerequisites to set-up the development environment.
+Clone the repository and install node.js modules.
 
 ```powershell
 git clone https://github.com/taghead/taghead.xyz.git
 cd .\taghead.xyz\
 npm install
 ```
+#### 1. Building
+Lets start by obtaining the production credentials, open up [https://supabase.io](https://supabase.io) and create a new project. 
 
-### 1.4 Supabase Backend ( User Authentication )
-
-User authentication is done through supabase.io, requiring an API KEY and URL to be applied to [/src/environments/environment.ts](/src/environments/environment.ts) and [/src/environments/environment.prod.ts](/src/environments/environment.prod.ts).
+Once the project is stood up navigate to `Settings > API` to retreive the production credentials and apply it to [/src/environments/environment.prod.ts](/src/environments/environment.prod.ts). Finally whitelist the domain/ip address the website is hosted on head over to `Authentication > Settings` and change fill both Site URL and Additional Redirect URLs to your domain.
 
 ```javascript
 export const environment = {
-  // Add the following
+  // Edit the following
   supabase_url: 'Your Supabase URL here',
   supabase_key: 'Your Supabase API Key here'
 };
 ```
 
-## 2. Additional Information
-#### 2.1. Forgot TypeScript? 
+Running the command `npm run build-prod` will build to the folder /dist.
+
+#### 2. Development
+Run `npx supabase init` and use the default ports. Once it finishes intializing you will be given local Supabase credentials. Apply the Supabase URL and Supabase Key (anon, public) to [/src/environments/environment.ts](/src/environments/environment.ts).
+
+```javascript
+export const environment = {
+  // Edit the following
+  supabase_url: 'Your Supabase URL here',
+  supabase_key: 'Your Supabase API Key here'
+};
+```
+
+Finally run `npm run start`
+
+## 3. Additional Information
+#### 3.1. Forgot TypeScript? 
 Give the [/docs/typescript_refresher.md](/docs/typescript_refresher.md) a read. Hopefully, it will help you out.
 
-#### 2.2. The project charter
+#### 3.2. The project charter
 Located in [/docs/project_charter.md](/docs/project_charter.md). It's nothing special, more so convention.
+
+#### 3.3 Contributing 
+Read the [CONTRIBUTIONS.md](/CONTRIBUTIONS.md)

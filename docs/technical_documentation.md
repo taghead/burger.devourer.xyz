@@ -102,10 +102,11 @@ Some services and components require credentials consisting of Supabases API URL
 
 There are two versions of credentials we will be obtaining, production and testing.
 
-Lets start by obtaining the production credentials, open up [https://supabase.io](https://supabase.io) and create a new project. 
 
 ##### Production Credentials
-Once the project is stood up navigate to `Settings > API` to retreive the production credentials and apply it to [/src/environments/environment.prod.ts](/src/environments/environment.prod.ts). Finally to whitelist the domain/ip address the website is hosted on head over to `Authentication > Settings` and change fill both Site URL and Additional Redirect URLs to https://taghead.xyz.
+Lets start by obtaining the production credentials, open up [https://supabase.io](https://supabase.io) and create a new project. 
+
+Once the project is stood up navigate to `Settings > API` to retreive the production credentials and apply it to [/src/environments/environment.prod.ts](/src/environments/environment.prod.ts). Finally whitelist the domain/ip address the website is hosted on head over to `Authentication > Settings` and change fill both Site URL and Additional Redirect URLs to https://taghead.xyz.
 
 ```javascript
 export const environment = {
@@ -147,15 +148,21 @@ Note: To access the email testing server navigate to http://localhost:9000
 ### 🍉 body
 This component is located in [/src/app/body](/src/app/body)
 
+To generate this component run `npx ng g c body`
+
 ### 🍉 footer 
 This component is located in [/src/app/footer](/src/app/footer)
+
+To generate this component run `npx ng g c footer`
 
 ###  🍉header 
 This component is located in [/src/app/header](/src/app/header)
 
+To generate this component run `npx ng g c header`
 ### 🍉 login-dialog 
 This component is located in [/src/app/login-dialog](/src/app/login-dialog)
 
+To generate this component run `npx ng g c login-dialog`
 ### 🥭 supabase
 This service is located in [/src/app/](/src/app/) as [/src/app/supabase.service](/src/app/supabase.service) and [/src/app/supabase.spec.service](/src/app/supabase.spec.service)
 
