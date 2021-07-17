@@ -1,24 +1,44 @@
-<form>
-  <div class="button-close-dialog">
-    <button mat-icon-button mat-dialog-close aria-label="Example icon button with a vertical three dot icon">
-      <mat-icon>close</mat-icon>
-    </button>
-  </div>
-  <br/><br/>
+<div>
+  <form [formGroup]="authForm">
 
-  <mat-form-field appearance="fill">
-    <mat-label>Enter your email</mat-label>
-    <input matInput placeholder="pat@example.com" [formControl]="email" required>
-    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-  </mat-form-field>
-  <br/>
-  <mat-form-field appearance="fill">
-    <mat-label>Enter your password</mat-label>
-    <input matInput [type]="hide ? 'password' : 'text'">
-    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </button>
-  </mat-form-field><br/>
-  <button id="btn-sign-in" mat-raised-button>Sign Up</button>
-  <button id="btn-sign-up" mat-raised-button>Sign In</button>
-</form>
+    <mat-form-field appearance="fill">
+      <mat-label for="email">
+        <span>*</span>
+        Email:
+      </mat-label>
+      <input matInput id="email" type="email" name="email" formControlName="email" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label for="password">
+        <span>*</span>
+        Password:
+      </mat-label>
+      <input matInput id="password" type="password" name="password" formControlName="password" required />
+    </mat-form-field>
+
+    <div *ngIf="helperText?.text && helperText?.error">
+      {{ helperText?.text }}
+    </div>
+    <div *ngIf="helperText?.text && !helperText?.error">
+      {{ helperText?.text }}
+    </div>
+    <div>
+      <span>
+        <button mat-raised-button type="button" (click)="handleLogin('REGISTER')">
+          Sign Up
+        </button>
+      </span>
+      <span>
+        <button mat-raised-button (click)="forgotPassword()" type="button">
+          Forgot Password
+        </button>
+      </span>
+      <span>
+        <button mat-raised-button (click)="handleLogin('LOGIN')" type="button">
+          Sign In
+        </button>
+      </span>
+    </div>
+  </form>
+</div>

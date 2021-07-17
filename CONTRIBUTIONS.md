@@ -1,5 +1,14 @@
 Contributions are made by members of this repository as a member, please ensure the established criteria is being followed. 
 If clarification is required, create an issue using the label **question**.
+
+## Important Instructions
+The following commands will ensure that secrets don't get revealed to the public.
+
+```powershell
+git update-index --skip-worktree .\src\environments\environment.prod.ts
+git update-index --skip-worktree .\src\environments\environment.ts
+```
+
 ## Requesting a issue 
 
 Request an issue using the label **feature** and provide details. No formailties required.
@@ -42,6 +51,12 @@ Once done create a pull request.
 - Ensure the target branch is the main branch. Main will always contain the latests merged development code.
 
 ## Build and Tag Release
-`git add .; git commit -m "Release"; git push`
-`git tag -a v0.1 -m "v0.1 Initial build workflow testing"`
-`git push origin v0.1`
+Create a pull request from development to release and tag the commit to initiate the git build workflow. 
+
+example tagging. 
+
+```bash
+git add .; git commit -m "Release"; git push
+git tag -a v0.1 -m "v0.1 Initial build workflow testing"
+git push origin v0.1
+```
