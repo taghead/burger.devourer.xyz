@@ -76,3 +76,6 @@ Located in [/docs/project_charter.md](/docs/project_charter.md). It's nothing sp
 
 #### 3.3 Contributing 
 Read the [CONTRIBUTIONS.md](/CONTRIBUTIONS.md)
+
+#### 3.4 Technical Document
+Read the [/docs/technical_documentation.md](/docs/technical_documentation.md)

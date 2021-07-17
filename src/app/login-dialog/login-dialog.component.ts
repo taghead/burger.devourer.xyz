@@ -45,7 +45,7 @@ export class LoginDialogComponent {
 
     const { user, error, session } =
       type === 'LOGIN'
-        ? await this.supabase.signIn(email, password)
+        ? await this.supabase.signIn(email, password).then()
         : await this.supabase.signUp(email, password)
 
     if (user && type === 'LOGIN') {
