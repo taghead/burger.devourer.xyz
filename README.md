@@ -2,7 +2,7 @@
 [![Build Angular](https://github.com/taghead/taghead.xyz/actions/workflows/main.yml/badge.svg)](https://github.com/taghead/taghead.xyz/actions/workflows/main.yml) [![https://taghead.xyz](https://img.shields.io/website-up-down-green-red/http/taghead.xyz.svg )](https://taghead.xyz)
 # <p align="center"> ![v0.15 Preview](docs/img/previews/v0.15/v0.15_Desktop.gif) </p>
 
-This web application live and hosted on https://taghead.xyz/. The focus of this repository is to expand our knowledge.
+This web application live and hosted on https://taghead.xyz/. The focus of this repository is to learn.
 
 The stack
 - Framework: [NextJs](https://nextjs.org/)
@@ -22,7 +22,7 @@ Feature List
 - [ ] Voting System
 - [ ] User Feedback System
 
-## 1. Building/Development
+## 1. Development
 
 Download and Install :
 - [Node.js (with npm)](https://nodejs.org/en/download/) - Used for building, development and testing.
@@ -33,12 +33,31 @@ Clone the repository and install node.js modules.
 ```powershell
 git clone https://github.com/taghead/taghead.xyz.git
 cd .\taghead.xyz\
-npm install
+npm install -g yarn
+yarn
 ```
-#### Building
+Getting Started:
+- First, run the development server `yarn dev`
 
+- Open [http://localhost:3000](http://localhost:3000).
 
-#### Development
+- [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api](http://localhost:3000/api).
+
+- The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+## Deployment
+
+Options are: 
+- Docker ( Preferred )
+- NodeJS
+- Vercel
+- AWS
+- More available at https://nextjs.org/docs/deployment
 
 
 ## 3. Additional Information
@@ -53,3 +72,5 @@ Read the [CONTRIBUTIONS.md](/CONTRIBUTIONS.md)
 
 #### 3.4 Technical Document
 Read the [/docs/technical_documentation.md](/docs/technical_documentation.md)
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
