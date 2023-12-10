@@ -79,3 +79,9 @@ Read the [CONTRIBUTIONS.md](/CONTRIBUTIONS.md)
 
 #### 3.4 Technical Document
 Read the [/docs/technical_documentation.md](/docs/technical_documentation.md)
+
+#### 3.5 Running Docker
+```
+docker build -t burger .
+docker run -d --name burger -p 0.0.0.0:4200:4200 burger 
+```
