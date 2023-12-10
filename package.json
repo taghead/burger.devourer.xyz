@@ -45,6 +45,7 @@
   "scripts": {
     "ng": "ng",
     "start": "supabase start && ng serve && supabase stop",
+    "serve": "ng serve",
     "build": "ng build",
     "build-prod": "ng build --prod",
     "test": "ng test",
